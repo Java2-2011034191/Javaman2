@@ -26,6 +26,7 @@ public class Calc {
 		result = a * b;
 		System.out.println(result);
 		
+		
 		input.close();
 	}
 
