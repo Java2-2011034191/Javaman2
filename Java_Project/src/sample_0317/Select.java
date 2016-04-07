@@ -1,4 +1,5 @@
 package sample_0317;
+
 import java.util.*;
 
 public class Select {
@@ -9,20 +10,17 @@ public class Select {
 		Scanner input = new Scanner(System.in);
 		System.out.println("x를 입력하세요");
 		int x = input.nextInt();
-		
-		if(x==0) {
+
+		if (x == 0) {
 			System.out.println("0");
-		}
-		else if( (x%2) ==0 ){
+		} else if ((x % 2) == 0) {
 			System.out.println("Even");
-		}
-		else {
+		} else {
 			System.out.println("odd");
 		}
-		
-		
-		int result=x%2;
-		switch(result){
+
+		int result = x % 2;
+		switch (result) {
 		case 0:
 			System.out.println("Even");
 			break;
@@ -30,10 +28,8 @@ public class Select {
 			System.out.println("odd");
 			break;
 
-		
 		}
-		
-		
+
 	}
 
 }
