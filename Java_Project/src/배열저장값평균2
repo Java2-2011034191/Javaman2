@@ -1,0 +1,15 @@
+package Final_1; // 배열 저장값의 평균 구하기 p.278
+
+public class ArrayAverageTest {
+	final static int STUDENTS = 5;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] scores = new int[STUDENTS];
+		ArrayAverage obj = new ArrayAverage();
+		obj.getValues(scores); // 1번
+		
+		System.out.println("평균은 =" + obj.getAverage(scores)); // 4번
+	}
+
+}
