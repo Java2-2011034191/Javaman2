@@ -1,0 +1,22 @@
+package Final_1; // p.275
+
+public class ArrayProcTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] list = {1, 2, 3, 4, 5 };
+		ArrayProc obj = new ArrayProc();
+		
+		obj.inc(list);
+		
+		for (int i = 0; i < list.length; i++) {
+			System.out.print(list[i] + " ");
+		}
+
+	}
+
+}
+
+// 배열을 매개 변수로 받아야 한다. 자바에서는 배열도 객체이며 따라서 배열이 전달되는 경우에도 객체 전달과 동이 처리된다.
+// 배열이 전달되는 것이 아니라 배열을 가리키는 참조값이 복사되고 메소드에서 매개 변수를 통해 배열 변경 시 원본 배열이 변경된다.
