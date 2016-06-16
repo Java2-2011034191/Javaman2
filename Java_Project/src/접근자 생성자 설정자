@@ -1,0 +1,14 @@
+package Final_1; //접근자 생성자 설정자 p.244
+
+public class Account {
+	private int regNumber;
+	private String name;
+	private int balance;
+	//필드가 모두 private로 선언되어 클래스 내부에서만 사용 가능
+	
+	public String getName() { return name; }
+	public void setName(String name) { this.name = name; }
+	public int getBalance() { return balance; }
+	public void setBalance(int balance) { this.balance = balance; }
+	//접근자와 생성자
+}
