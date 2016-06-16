@@ -1,0 +1,42 @@
+package Final_2; //동적 메소드 호출 p.347
+
+class Animal {
+	void sound() {
+		System.out.println("Animal 클래스의 sound()");
+	}
+}
+
+class Dog extends Animal {
+	void sound() {
+		System.out.println("멍멍");
+	}
+}
+
+class Cat extends Animal {
+	void sound() {
+		System.out.println("야옹");
+	}
+}
+// 메소드 오버라이딩 x2
+
+public class DyanamicCallTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Animal animal = new Animal();
+		Dog dog = new Dog();
+		Cat cat = new Cat();
+		
+		Animal obj;
+		
+		obj = animal;
+		obj.sound();
+		
+		obj = dog;
+		obj.sound();
+		
+		obj = cat;
+		obj.sound();
+	}
+
+}
