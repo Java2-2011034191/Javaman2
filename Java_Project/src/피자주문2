@@ -1,0 +1,11 @@
+package Final_2; // 피자 주문 화면 작성 GUI p.382
+
+public class PizzaOrderTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PizzaOrder p = new PizzaOrder();
+		
+	}
+
+}
