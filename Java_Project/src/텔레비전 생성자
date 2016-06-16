@@ -1,0 +1,18 @@
+package Final_1; // 텔레비전 생성자 p.254
+
+public class Television {
+	private int channel; // 채널 번호
+	private int volume; // 볼륨
+	private boolean onOff; // 전원 상태
+	
+	Television(int c, int v, boolean o) {
+		channel = c;
+		volume = v;
+		onOff = o;
+	} //생성자 정의
+	
+	void print() {
+		System.out.println("채널은 " + channel + "이고 볼륨은 " + volume + "입니다.");
+	}
+
+}
