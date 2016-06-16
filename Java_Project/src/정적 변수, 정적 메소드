@@ -1,0 +1,23 @@
+package Final_1; // 정적 변수, 정적 메소드 사용 자동차의 시리얼 번호 구현 p.286
+
+public class Car {
+	private String model;
+	private String color;
+	private int speed;
+	
+	//자동차의 시리얼 번호
+	private int id;
+	static int numbers = 0; // 생성된 Car 객체 개수를 위한 정적 변수
+	
+	public Car(String m, String c, int s) {
+		model = m;
+		color = c;
+		speed = s;
+		id = ++numbers; // 자동차의 개수를 증가시키고 id에 대입
+	}
+	
+	public static int getNumberOfCars() {
+		return numbers;
+	}
+	// 정적 메소드
+}
