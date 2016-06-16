@@ -1,0 +1,10 @@
+package Final_3; // 자율 주행 자동차 인터페이스 p.404
+
+public interface OperateCar {
+	
+	void start();
+	void stop();
+	void setSpeed(int speed);
+	void turn(int degree);
+}
+// 자동차를 제어하기 위한 규격
