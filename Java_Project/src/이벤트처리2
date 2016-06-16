@@ -1,0 +1,43 @@
+package Final_3; // 다양한 이벤트 처리 방법 2 - 리스너 클래스를 내부 클래스로 작성 p.460
+
+import javax.swing.*;
+import java.awt.event.*;
+
+class MyFrame2 extends JFrame {
+	private JButton button;
+	private JLabel label;
+	// 생성자와 actionPerformed() 메소드에서 사용하기 때문에 button, label 변수가 멤버 변수로 선언.
+	
+	public MyFrame2() {
+		this.setSize(300, 200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setTitle("이벤트 예제");
+		JPanel panel = new JPanel();
+		button = new JButton("버튼을 누르시오");
+		label = new JLabel("아직 버튼이 눌려지지 않았습니다.");
+		button.addActionListener(new MyListener()); // 버튼에 이벤트 리스너 등록
+		panel.add(button);
+		panel.add(label);
+		this.add(panel);
+		this.setVisible(true);
+	}
+
+	private class MyListener implements ActionListener {
+		public void actionPerformed(ActionEvent e) { // MyLi~클래스 안에서 actionP~메소드는 반드시 정의되어야 함. 버튼 누를 때마다 실행.
+			if (e.getSource() == button) {
+				label.setText("마침내 버튼이 눌려졌습니다.");
+			}
+		}
+	}
+	// MyListener 클래스는 MyFrame 클래스의 내부 클래스로 정의됨.
+	// MyListener 클래스는 Action 이벤트를 처리할 수 있도록 액션리스너 인터페이스를 구현
+}
+
+public class ActionEventTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyFrame2 t = new MyFrame2();
+	}
+
+}
